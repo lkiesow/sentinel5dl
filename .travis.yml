@@ -8,13 +8,10 @@ python:
   - "3.7"
 
 install:
-  - sudo apt-get install -y - npm libgnutls28-dev
-  - sudo npm install -g markdownlint-cli
   - pip install flake8
 
 script:
   - flake8 sentinel5dl
-  - markdownlint .
   - python setup.py install
 
 after_success:
